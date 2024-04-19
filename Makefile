@@ -6,7 +6,7 @@ test:
 
 dev-up:
 	@echo "Starting development environment..."
-	docker compose -f docker-compose.dev.yml up --build
+	docker compose -f docker-compose.dev.yml up --build --detach
 
 dev-down:
 	@echo "Shutting down development environment..."
@@ -14,7 +14,7 @@ dev-down:
 
 prod-up:
 	@echo "Starting production environment..."
-	docker compose -f docker-compose.prod.yml up --build
+	docker compose -f docker-compose.prod.yml up --build --detach
 
 prod-down:
 	@echo "Shutting down production environment..."
