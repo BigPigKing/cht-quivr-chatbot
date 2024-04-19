@@ -1,28 +1,21 @@
-test:
-	pytest backend/
+.PHONY: test dev-up dev-down prod-up prod-down
 
-dev:
-	docker compose -f docker-compose.dev.yml build backend-core
+test:
+	@echo "Execute PyTest ..."
+	PyTest backend
+
+dev-up:
+	@echo "Starting development environment..."
 	docker compose -f docker-compose.dev.yml up --build
 
-dev-saas:
-	docker compose -f docker-compose-dev-saas-supabase.yml build backend-core
-	docker compose -f docker-compose-dev-saas-supabase.yml up --build
+dev-down:
+	@echo "Shutting down development environment..."
+	docker compose -f docker-compose.dev.yml down
 
-dev-saas-back:
-	docker compose -f docker-compose-dev-only-back-saas-supabase.yml build backend-core
-	docker compose -f docker-compose-dev-only-back-saas-supabase.yml up --build backend-core
+prod-up:
+	@echo "Starting production environment..."
+	docker compose -f docker-compose.prod.yml up --build
 
-dev-stan:
-	docker compose -f docker-compose-no-frontend.dev.yml up --build 
-
-prod:
-	docker compose build backend-core
-	docker compose -f docker-compose.yml up --build
-
-test-type:
-	@if command -v python3 &>/dev/null; then \
-		python3 -m pyright; \
-	else \
-		python -m pyright; \
-	fi
+prod-down:
+	@echo "Shutting down production environment..."
+	docker compose -f docker-compose.prod.yml down
