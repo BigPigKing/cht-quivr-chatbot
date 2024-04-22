@@ -1,5 +1,65 @@
 # Changelog
 
+## 0.0.235 (2024-04-21)
+
+## What's Changed
+* fix(sources): Remove duplicate sources and add metadata to model response by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2462
+
+
+**Full Changelog**: https://github.com/QuivrHQ/quivr/compare/v0.0.234...v0.0.235
+
+## 0.0.234 (2024-04-21)
+
+## What's Changed
+* fix(gpt4): Refactor GPT4Brain and KnowledgeBrainQA classes to add non-streaming-saving-answer by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2460
+
+
+**Full Changelog**: https://github.com/QuivrHQ/quivr/compare/v0.0.233...v0.0.234
+
+## 0.0.233 (2024-04-21)
+
+## What's Changed
+* refactor: reorg files in backend by @MaximeThoonsen in https://github.com/QuivrHQ/quivr/pull/2449
+* Revert "refactor: reorg files in backend" by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2456
+* refactor: Refacto code #1 by @MaximeThoonsen in https://github.com/QuivrHQ/quivr/pull/2458
+* refactor: reorg the files #2 by @MaximeThoonsen in https://github.com/QuivrHQ/quivr/pull/2457
+* feat(gpt4): Add chat service and generate answer method to GPT4Brain class by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2459
+
+## New Contributors
+* @MaximeThoonsen made their first contribution in https://github.com/QuivrHQ/quivr/pull/2449
+
+**Full Changelog**: https://github.com/QuivrHQ/quivr/compare/v0.0.232...v0.0.233
+
+## 0.0.232 (2024-04-19)
+
+## What's Changed
+* Update CPU and memory settings in task definition files by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2450
+* fix: Fix error message in SummaryAssistant class by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2453
+
+
+**Full Changelog**: https://github.com/QuivrHQ/quivr/compare/v0.0.231...v0.0.232
+
+## 0.0.231 (2024-04-19)
+
+## What's Changed
+* feat(assistants): Add user usage update and pricing calculation to ITO assistant by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2433
+* feat(assistant): improve prompt summary by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2435
+* feat(assistants): Add PDF generation functionality and nice emails by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2436
+* feat(analytics): rely on sql rather that python loop for brains by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2437
+* fix(assistant): summary now can output 2000 tokens by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2440
+* feat(assistant): check if key of file is same as filename uploaded by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2439
+* feat: Update Docker build commands and dependencies by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2441
+* feat(rag): Refactor DEFAULT_DOCUMENT_PROMPT in quivr_rag.py by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2442
+* Enable Porter Application quivr-back by @porter-deployment-app in https://github.com/QuivrHQ/quivr/pull/2443
+* Enable Porter Application quivr-demo-front by @porter-deployment-app in https://github.com/QuivrHQ/quivr/pull/2444
+* fix(assistants): brain id is null by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2445
+* feat(summary): improve prompt to get more insights by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2446
+* feat(aws): Update CPU and memory configurations for task definitions by @StanGirard in https://github.com/QuivrHQ/quivr/pull/2447
+* feat(frontend): Quivr Assistants by @Zewed in https://github.com/QuivrHQ/quivr/pull/2448
+
+
+**Full Changelog**: https://github.com/QuivrHQ/quivr/compare/v0.0.230...v0.0.231
+
 ## 0.0.230 (2024-04-16)
 
 ## What's Changed

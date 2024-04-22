@@ -4,9 +4,9 @@ test:
 	@echo "Execute PyTest ..."
 	PyTest backend
 
-dev-up:
-	@echo "Starting development environment..."
-	docker compose -f docker-compose.dev.yml up --build --detach
+dev:
+	docker compose -f docker-compose.dev.yml build backend-core
+	docker compose -f docker-compose.dev.yml up --build
 
 dev-down:
 	@echo "Shutting down development environment..."

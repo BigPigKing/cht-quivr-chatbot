@@ -14,7 +14,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_openai import OpenAIEmbeddings
-from llm.utils.get_prompt_to_use import get_prompt_to_use
+from modules.prompt.service.get_prompt_to_use import get_prompt_to_use
 from logger import get_logger
 from models import BrainSettings  # Importing settings related to the 'brain'
 from modules.brain.service.brain_service import BrainService
@@ -64,9 +64,7 @@ ANSWER_PROMPT = ChatPromptTemplate.from_messages(
 
 # How we format documents
 
-DEFAULT_DOCUMENT_PROMPT = PromptTemplate.from_template(
-    template="File: {file_name} Content:  {page_content}"
-)
+DEFAULT_DOCUMENT_PROMPT = PromptTemplate.from_template(template="{page_content}")
 
 
 def is_valid_uuid(uuid_to_test, version=4):
