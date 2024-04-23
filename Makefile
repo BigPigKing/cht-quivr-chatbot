@@ -6,7 +6,7 @@ test:
 
 dev:
 	docker compose -f docker-compose.dev.yml build backend-core
-	docker compose -f docker-compose.dev.yml up --build
+	docker compose -f docker-compose.dev.yml up --build --detach
 
 dev-down:
 	@echo "Shutting down development environment..."

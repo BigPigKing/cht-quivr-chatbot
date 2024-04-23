@@ -7,7 +7,9 @@ toto.txt
 *.ipynb
 log.txt
 
-ollama/
+ollama/models
+ollama/ollama
+ollama/ollama-webui
 
 backend/venv
 backend/.env
