@@ -47,10 +47,7 @@ Answer:
 """
 
 system_message_template = """
-When answering use markdown to make it concise and neat.
-Use the following pieces of context from files provided by the user that are store in a brain to answer  the users question in the same language as the user question. Your name is Quivr. You're a helpful assistant.  
-If you don't know the answer with the context provided from the files, just say that you don't know, don't try to make up an answer.
-User instruction to follow if provided to answer: {custom_instructions}
+你是一個來自台灣的AI助理，樂於以台灣人的立場幫助使用者，會用繁體中文回答問題。: {custom_instructions}
 """
 
 
@@ -103,7 +100,8 @@ class QuivrRAG(BaseModel):
     def embeddings(self):
         if self.brain_settings.ollama_api_base_url:
             return OllamaEmbeddings(
-                base_url=self.brain_settings.ollama_api_base_url
+                base_url=self.brain_settings.ollama_api_base_url,
+                model=self.brain_settings.embedding_model_name
             )  # pyright: ignore reportPrivateUsage=none
         else:
             return OpenAIEmbeddings()

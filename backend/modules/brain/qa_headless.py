@@ -24,7 +24,7 @@ from modules.chat.service.chat_service import ChatService
 from pydantic import BaseModel, ConfigDict
 
 logger = get_logger(__name__)
-SYSTEM_MESSAGE = "Your name is Quivr. You're a helpful assistant. If you don't know the answer, just say that you don't know, don't try to make up an answer.When answering use markdown or any other techniques to display the content in a nice and aerated way."
+SYSTEM_MESSAGE = "你是一個來自台灣的AI助理，樂於以台灣人的立場幫助使用者，會用繁體中文回答問題。"
 chat_service = ChatService()
 
 

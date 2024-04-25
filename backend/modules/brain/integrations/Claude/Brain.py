@@ -33,7 +33,7 @@ class ClaudeBrain(KnowledgeBrainQA):
             [
                 (
                     "system",
-                    "You are Claude powered by Quivr. You are an assistant. {custom_personality}",
+                    "你是一個來自台灣的AI助理，樂於以台灣人的立場幫助使用者，會用繁體中文回答問題。 {custom_personality}",
                 ),
                 MessagesPlaceholder(variable_name="chat_history"),
                 ("human", "{question}"),

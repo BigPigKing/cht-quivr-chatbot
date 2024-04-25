@@ -3,6 +3,7 @@ from typing import AsyncIterable, List, Optional
 from uuid import UUID
 
 from langchain.callbacks.streaming_aiter import AsyncIteratorCallbackHandler
+from pydantic_settings import BaseSettings
 from logger import get_logger
 from models import BrainSettings
 from modules.brain.entity.brain_entity import BrainEntity
@@ -24,10 +25,9 @@ from modules.prompt.service.get_prompt_to_use import get_prompt_to_use
 from modules.upload.service.generate_file_signed_url import generate_file_signed_url
 from modules.user.service.user_usage import UserUsage
 from pydantic import BaseModel, ConfigDict
-from pydantic_settings import BaseSettings
 
 logger = get_logger(__name__)
-QUIVR_DEFAULT_PROMPT = "Your name is Quivr. You're a helpful assistant.  If you don't know the answer, just say that you don't know, don't try to make up an answer."
+QUIVR_DEFAULT_PROMPT = "你是一個來自台灣的AI助理，樂於以台灣人的立場幫助使用者，會用繁體中文回答問題。"
 
 
 brain_service = BrainService()

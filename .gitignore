@@ -7,6 +7,8 @@ toto.txt
 *.ipynb
 log.txt
 
+logs/
+
 ollama/models
 ollama/ollama
 ollama/ollama-webui

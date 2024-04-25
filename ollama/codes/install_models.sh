@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define a log file
-log_file="/var/log/install_models.log"
+log_file="/var/logs/install_models.log"
 
 # Function to log messages
 log() {
@@ -17,24 +17,17 @@ ollama_pid=$!
 log "ollama service started with PID $ollama_pid"
 
 # Pull model containers
-log "Pulling model znbang/bge:large-zh-v1.5-f32"
-ollama pull znbang/bge:large-zh-v1.5-f32 &>> $log_file
+log "Pulling model znbang/bge:large-zh-v1.5-f16"
+ollama pull znbang/bge:large-zh-v1.5-f16 &>> $log_file
 if [ $? -ne 0 ]; then
-    log "Failed to pull model znbang/bge:large-zh-v1.5-f32."
+    log "Failed to pull model znbang/bge:large-zh-v1.5-f16."
     exit 1
 fi
 
-log "Pulling model all-minilm:l12-v2"
-ollama pull all-minilm:l12-v2 &>> $log_file
+log "Pulling model all-minilm"
+ollama pull all-minilm &>> $log_file
 if [ $? -ne 0 ]; then
-    log "Failed to pull model all-minilm:l12-v2."
-    exit 1
-fi
-
-log "Pulling model llama2"
-ollama pull llama2 &>> $log_file
-if [ $? -ne 0 ]; then
-    log "Failed to pull model llama2."
+    log "Failed to pull model all-minilm."
     exit 1
 fi
 

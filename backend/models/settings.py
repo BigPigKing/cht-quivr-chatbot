@@ -104,6 +104,7 @@ class PostHogSettings(BaseSettings):
 
 
 class BrainSettings(BaseSettings):
+    embedding_model_name: str = "znbang/bge:large-zh-v1.5-f16"
     model_config = SettingsConfigDict(validate_default=False)
     openai_api_key: str = ""
     supabase_url: str = ""
@@ -138,6 +139,7 @@ def get_embeddings():
     if settings.ollama_api_base_url:
         embeddings = OllamaEmbeddings(
             base_url=settings.ollama_api_base_url,
+            model=settings.embedding_model_name
         )  # pyright: ignore reportPrivateUsage=none
     else:
         embeddings = OpenAIEmbeddings()  # pyright: ignore reportPrivateUsage=none

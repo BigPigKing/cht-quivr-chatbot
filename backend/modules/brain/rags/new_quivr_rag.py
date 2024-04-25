@@ -85,7 +85,8 @@ class QuivrRAG(BaseModel):
     def embeddings(self):
         if self.brain_settings.ollama_api_base_url:
             return OllamaEmbeddings(
-                base_url=self.brain_settings.ollama_api_base_url
+                base_url=self.brain_settings.ollama_api_base_url,
+                model=self.brain_settings.embedding_model_name
             )  # pyright: ignore reportPrivateUsage=none
         else:
             return OpenAIEmbeddings()

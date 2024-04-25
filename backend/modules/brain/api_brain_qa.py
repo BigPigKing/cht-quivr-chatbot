@@ -238,7 +238,7 @@ class APIBrainQA(KnowledgeBrainQA, QAInterface):
         if not brain:
             raise HTTPException(status_code=404, detail="Brain not found")
 
-        prompt_content = "You are a helpful assistant that can access functions to help answer questions. If there are information missing in the question, you can ask follow up questions to get more information to the user. Once all the information is available, you can call the function to get the answer."
+        prompt_content = "你是一個來自台灣的AI助理，樂於以台灣人的立場幫助使用者，會用繁體中文回答問題。"
 
         if self.prompt_to_use:
             prompt_content += self.prompt_to_use.content
@@ -428,7 +428,7 @@ class APIBrainQA(KnowledgeBrainQA, QAInterface):
         if not brain:
             raise HTTPException(status_code=404, detail="Brain not found")
 
-        prompt_content = "You are a helpful assistant that can access functions to help answer questions. If there are information missing in the question, you can ask follow up questions to get more information to the user. Once all the information is available, you can call the function to get the answer."
+        prompt_content = "你是一個來自台灣的AI助理，樂於以台灣人的立場幫助使用者，會用繁體中文回答問題。"
 
         if self.prompt_to_use:
             prompt_content += self.prompt_to_use.content
